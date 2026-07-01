@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Date Request ❤️</title>
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Flatpickr CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+<h1>🌸 Will you go on a date with me? 🌸</h1>
+
+<button class="yes" onclick="nextPage(2)">YES ❤️</button>
+<button class="no" id="noBtn">NO 🥺</button>
+
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+
+<h1>So... when are you free? 📅</h1>
+
+<input
+    type="text"
+    id="date"
+    placeholder="Select your date ❤️"
+>
+
+<input type="time" id="time">
+
+<button class="next" onclick="nextPage(3)">
+Set the Date ❤️
+</button>
+
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+
+<h1>What are we feeling? 🍽️</h1>
+
+<div class="grid">
+
+<div class="card" onclick="selectFood(this)">🍕 Pizza</div>
+
+<div class="card" onclick="selectFood(this)">🥘 Biryani</div>
+
+<div class="card" onclick="selectFood(this)">🍔 Burger</div>
+
+<div class="card" onclick="selectFood(this)">🍝 Pasta</div>
+
+<div class="card" onclick="selectFood(this)">🥟 Momos</div>
+
+<div class="card" onclick="selectFood(this)">🍛 Rice</div>
+
+</div>
+
+<button class="next" onclick="finish()">
+Next 💕
+</button>
+
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="page4">
+
+<h1>YAY!! 💖</h1>
+
+<div class="result">
+
+<p id="showDate"></p>
+
+<p id="showTime"></p>
+
+<p id="showFood"></p>
+
+</div>
+
+<h2 style="color:#d63384">
+I can't wait to see you! 🌹
+</h2>
+
+</div>
+
+<!-- Flatpickr JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
